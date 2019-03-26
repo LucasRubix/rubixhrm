@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Telaat index{% endblock %}
+
+{% block body %}
+    <h1>Telaat index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Datum</th>
+                <th>Tijd</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for telaat in telaats %}
+            <tr>
+                <td>{{ telaat.id }}</td>
+                <td>{{ telaat.datum ? telaat.datum|date('Y-m-d') : '' }}</td>
+                <td>{{ telaat.tijd ? telaat.tijd|date('H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('telaat_show', {'id': telaat.id}) }}">show</a>
+                    <a href="{{ path('telaat_edit', {'id': telaat.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('telaat_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

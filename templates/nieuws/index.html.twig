@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nieuws index{% endblock %}
+
+{% block body %}
+    <h1>Nieuws index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                {#<th>Id</th>#}
+                <th>Titel</th>
+                <th>Omschrijving</th>
+                <th>Datum</th>
+                <th>Foto</th>
+                {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <th>actions</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for nieuw in nieuws %}
+            <tr>
+                {#<td>{{ nieuw.id }}</td>#}
+                <td>{{ nieuw.titel }}</td>
+                <td>{{ nieuw.omschrijving }}</td>
+                <td>{{ nieuw.datum ? nieuw.datum|date('Y-m-d') : '' }}</td>
+                <td>{{ nieuw.foto }}</td>
+                {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <td>
+                    <a href="{{ path('nieuws_show', {'id': nieuw.id}) }}">show</a>
+                    <a href="{{ path('nieuws_edit', {'id': nieuw.id}) }}">edit</a>
+                </td>
+                {% endif %}
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('nieuws_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

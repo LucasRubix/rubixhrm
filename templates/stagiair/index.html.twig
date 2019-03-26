@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stagiair index{% endblock %}
+
+{% block body %}
+    <h1>Stagiair index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Urentotaal</th>
+                <th>Begindatum</th>
+                <th>Einddatum</th>
+                <th>School</th>
+                <th>Contactpersoon</th>
+                <th>Contactpersoon_email</th>
+                <th>Contactpersoon_telefoonnr</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stagiair in stagiairs %}
+            <tr>
+                <td>{{ stagiair.id }}</td>
+                <td>{{ stagiair.urentotaal }}</td>
+                <td>{{ stagiair.begindatum ? stagiair.begindatum|date('Y-m-d') : '' }}</td>
+                <td>{{ stagiair.einddatum ? stagiair.einddatum|date('Y-m-d') : '' }}</td>
+                <td>{{ stagiair.school }}</td>
+                <td>{{ stagiair.contactpersoon }}</td>
+                <td>{{ stagiair.contactpersoonEmail }}</td>
+                <td>{{ stagiair.contactpersoonTelefoonnr }}</td>
+                <td>
+                    <a href="{{ path('stagiair_show', {'id': stagiair.id}) }}">show</a>
+                    <a href="{{ path('stagiair_edit', {'id': stagiair.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('stagiair_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

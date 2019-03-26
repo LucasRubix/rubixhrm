@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vrijvragen index{% endblock %}
+
+{% block body %}
+    <h1>Vrijvragen index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Begindatum</th>
+                <th>Einddatum</th>
+                <th>Uren</th>
+                <th>Begintijd</th>
+                <th>Eindtijd</th>
+                <th>Reden</th>
+                <th>Goedgekeurd</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vrijvragen in vrijvragens %}
+            <tr>
+                <td>{{ vrijvragen.id }}</td>
+                <td>{{ vrijvragen.begindatum ? vrijvragen.begindatum|date('Y-m-d') : '' }}</td>
+                <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>
+                <td>{{ vrijvragen.uren }}</td>
+                <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>
+                <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>
+                <td>{{ vrijvragen.reden }}</td>
+                <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}">show</a>
+                    <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('vrijvragen_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

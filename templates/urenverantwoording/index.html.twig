@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Urenverantwoording index{% endblock %}
+
+{% block body %}
+    <h1>Urenverantwoording index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Datum</th>
+                <th>Uren</th>
+                <th>Begintijd</th>
+                <th>Eindtijd</th>
+                <th>Omschrijving</th>
+                <th>Goedgekeurd</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for urenverantwoording in urenverantwoordings %}
+            <tr>
+                <td>{{ urenverantwoording.id }}</td>
+                <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
+                <td>{{ urenverantwoording.uren }}</td>
+                <td>{{ urenverantwoording.begintijd ? urenverantwoording.begintijd|date('Y-m-d') : '' }}</td>
+                <td>{{ urenverantwoording.eindtijd ? urenverantwoording.eindtijd|date('Y-m-d') : '' }}</td>
+                <td>{{ urenverantwoording.omschrijving }}</td>
+                <td>{{ urenverantwoording.goedgekeurd ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}">show</a>
+                    <a href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('urenverantwoording_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

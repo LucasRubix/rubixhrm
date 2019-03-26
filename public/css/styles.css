@@ -1,0 +1,43 @@
+/* Custom Style Classes
+
+Deze classes kunnen toegevoegd worden aan elementen
+
+ */
+
+.maincolor{
+    background-color: #96C93E;
+}
+.greenbutton{
+    background-color: #96C93E;
+    border-color: #96C93E;
+}
+.bluebutton{
+    background-color: #6584c3;
+    border-color: #6584c3;
+}
+.whitetext{
+    color: #FFFFFF;
+}
+.greennavbar{
+    background-color: #96C93E;
+}
+.navbar-li{
+     color: #ffffff;
+ }
+.navbar-li:hover{
+    color: #218838;
+}
+
+
+/*
+
+ Dit zijn custom stijlen
+
+ */
+
+.navbar-toggler {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    border: none;
+}

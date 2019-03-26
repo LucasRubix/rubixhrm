@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vrijvragen{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead class="maincolor">
+        <tr class="whitetext">
+            <th>Vrijvragen</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ vrijvragen.id }}</td>
+            </tr>
+            <tr>
+                <th>Begindatum</th>
+                <td>{{ vrijvragen.begindatum ? vrijvragen.begindatum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Einddatum</th>
+                <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Uren</th>
+                <td>{{ vrijvragen.uren }}</td>
+            </tr>
+            <tr>
+                <th>Begintijd</th>
+                <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Eindtijd</th>
+                <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Reden</th>
+                <td>{{ vrijvragen.reden }}</td>
+            </tr>
+            <tr>
+                <th>Goedgekeurd</th>
+                <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('vrijvragen_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}" class="btn btn-success greenbutton float-right">edit</a>
+
+    {{ include('vrijvragen/_delete_form.html.twig') }}
+{% endblock %}

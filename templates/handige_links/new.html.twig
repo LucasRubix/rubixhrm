@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New HandigeLinks{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header maincolor whitetext">
+        Create new HandigeLinks    </div>
+    <div class="card-body">
+    {{ include('handige_links/_form.html.twig') }}
+
+    <a href="{{ path('handige_links_index') }}" class="btn btn-primary bluebutton float-left">back to list</a>
+    </div>
+
+</div>
+{% endblock %}

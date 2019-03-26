@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contract index{% endblock %}
+
+{% block body %}
+    <h1>Contract index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Begindatum</th>
+                <th>Einddatum</th>
+                <th>Uren</th>
+                <th>Brutosalaris</th>
+                <th>Vrije_dagen</th>
+                <th>Bestandslocatie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contract in contracts %}
+            <tr>
+                <td>{{ contract.id }}</td>
+                <td>{{ contract.begindatum ? contract.begindatum|date('Y-m-d') : '' }}</td>
+                <td>{{ contract.einddatum ? contract.einddatum|date('Y-m-d') : '' }}</td>
+                <td>{{ contract.uren }}</td>
+                <td>{{ contract.brutosalaris }}</td>
+                <td>{{ contract.vrijeDagen }}</td>
+                <td>{{ contract.bestandslocatie }}</td>
+                <td>
+                    <a href="{{ path('contract_show', {'id': contract.id}) }}">show</a>
+                    <a href="{{ path('contract_edit', {'id': contract.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('contract_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

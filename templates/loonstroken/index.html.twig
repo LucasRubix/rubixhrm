@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Loonstroken index{% endblock %}
+
+{% block body %}
+    <h1>Loonstroken index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Bestand</th>
+                <th>Maand</th>
+                <th>Jaar</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for loonstroken in loonstrokens %}
+            <tr>
+                <td>{{ loonstroken.id }}</td>
+                <td>{{ loonstroken.bestand }}</td>
+                <td>{{ loonstroken.maand }}</td>
+                <td>{{ loonstroken.jaar }}</td>
+                <td>
+                    <a href="{{ path('loonstroken_show', {'id': loonstroken.id}) }}">show</a>
+                    <a href="{{ path('loonstroken_edit', {'id': loonstroken.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('loonstroken_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

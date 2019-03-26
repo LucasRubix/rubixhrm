@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Urenverantwoording{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead class="maincolor">
+        <tr class="whitetext">
+            <th>Urenverantwoording</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ urenverantwoording.id }}</td>
+            </tr>
+            <tr>
+                <th>Datum</th>
+                <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Uren</th>
+                <td>{{ urenverantwoording.uren }}</td>
+            </tr>
+            <tr>
+                <th>Begintijd</th>
+                <td>{{ urenverantwoording.begintijd ? urenverantwoording.begintijd|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Eindtijd</th>
+                <td>{{ urenverantwoording.eindtijd ? urenverantwoording.eindtijd|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Omschrijving</th>
+                <td>{{ urenverantwoording.omschrijving }}</td>
+            </tr>
+            <tr>
+                <th>Goedgekeurd</th>
+                <td>{{ urenverantwoording.goedgekeurd ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('urenverantwoording_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    <a href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}" class="btn btn-success greenbutton float-right">edit</a>
+
+    {{ include('urenverantwoording/_delete_form.html.twig') }}
+{% endblock %}

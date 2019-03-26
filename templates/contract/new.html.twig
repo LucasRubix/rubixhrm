@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Contract{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header maincolor whitetext">
+        Create new Contract    </div>
+    <div class="card-body">
+    {{ include('contract/_form.html.twig') }}
+
+    <a href="{{ path('contract_index') }}" class="btn btn-primary bluebutton float-left">back to list</a>
+    </div>
+
+</div>
+{% endblock %}

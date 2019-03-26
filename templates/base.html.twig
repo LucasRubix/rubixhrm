@@ -3,11 +3,67 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <a href="{{ path('default') }}"><img class="text-center" alt="Rubix Marketing" src="{{ asset('images/logo_rubix.jpg') }}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a href="{{ path('fos_user_security_login') }}" class="btn btn-success greenbutton my-2 my-sm-0 mr-3">Login</a>
+                <a href="{{ path('fos_user_registration_register') }}" class="btn btn-success greenbutton my-2 my-sm-0 mr-3">Register</a>
+            </form>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg greennavbar navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navbar-li" href="{{ path('default') }}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-li" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-li" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle navbar-li" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CRUDS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ path('contract_index') }}">Contract</a>
+                        <a class="dropdown-item" href="{{ path('downloads_index') }}">Downloads</a>
+                        <a class="dropdown-item" href="{{ path('handige_links_index') }}">Handige links</a>
+                        <a class="dropdown-item" href="{{ path('loonstroken_index') }}">Loonstroken</a>
+                        <a class="dropdown-item" href="{{ path('nieuws_index') }}">Nieuws</a>
+                        <a class="dropdown-item" href="{{ path('telaat_index') }}">Telaat</a>
+                        <a class="dropdown-item" href="{{ path('urenverantwoording_index') }}">Urenverantwoording</a>
+                        <a class="dropdown-item" href="{{ path('user_index') }}">User</a>
+                        <a class="dropdown-item" href="{{ path('vrijvragen_index') }}">Vrijvragen</a>
+
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     {% if app.request.hasPreviousSession %}
         {% for type, messages in app.session.flashbag.all() %}

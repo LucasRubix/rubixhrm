@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stagiair{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead class="maincolor">
+        <tr class="whitetext">
+            <th>Stagiair</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ stagiair.id }}</td>
+            </tr>
+            <tr>
+                <th>Urentotaal</th>
+                <td>{{ stagiair.urentotaal }}</td>
+            </tr>
+            <tr>
+                <th>Begindatum</th>
+                <td>{{ stagiair.begindatum ? stagiair.begindatum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Einddatum</th>
+                <td>{{ stagiair.einddatum ? stagiair.einddatum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>School</th>
+                <td>{{ stagiair.school }}</td>
+            </tr>
+            <tr>
+                <th>Contactpersoon</th>
+                <td>{{ stagiair.contactpersoon }}</td>
+            </tr>
+            <tr>
+                <th>Contactpersoon_email</th>
+                <td>{{ stagiair.contactpersoonEmail }}</td>
+            </tr>
+            <tr>
+                <th>Contactpersoon_telefoonnr</th>
+                <td>{{ stagiair.contactpersoonTelefoonnr }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('stagiair_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    <a href="{{ path('stagiair_edit', {'id': stagiair.id}) }}" class="btn btn-success greenbutton float-right">edit</a>
+
+    {{ include('stagiair/_delete_form.html.twig') }}
+{% endblock %}

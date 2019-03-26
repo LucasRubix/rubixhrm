@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <h1>User index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Username</th>
+                <th>UsernameCanonical</th>
+                <th>Email</th>
+                <th>EmailCanonical</th>
+                <th>Enabled</th>
+                <th>Salt</th>
+                <th>Password</th>
+                <th>LastLogin</th>
+                <th>ConfirmationToken</th>
+                <th>PasswordRequestedAt</th>
+                <th>Roles</th>
+                <th>Id</th>
+                <th>Naam</th>
+                <th>Tussenvoegsel</th>
+                <th>Achternaam</th>
+                <th>Geboortedatum</th>
+                <th>Telefoonnr</th>
+                <th>Adres</th>
+                <th>Postcode</th>
+                <th>Plaats</th>
+                <th>Profielfoto</th>
+                <th>Idkaartnummer</th>
+                <th>Iban</th>
+                <th>Facebook</th>
+                <th>Linkedin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.usernameCanonical }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.emailCanonical }}</td>
+                <td>{{ user.enabled ? 'Yes' : 'No' }}</td>
+                <td>{{ user.salt }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.lastLogin ? user.lastLogin|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ user.confirmationToken }}</td>
+                <td>{{ user.passwordRequestedAt ? user.passwordRequestedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ user.roles ? user.roles|join(', ') : '' }}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.naam }}</td>
+                <td>{{ user.tussenvoegsel }}</td>
+                <td>{{ user.achternaam }}</td>
+                <td>{{ user.geboortedatum ? user.geboortedatum|date('Y-m-d') : '' }}</td>
+                <td>{{ user.telefoonnr }}</td>
+                <td>{{ user.adres }}</td>
+                <td>{{ user.postcode }}</td>
+                <td>{{ user.plaats }}</td>
+                <td>{{ user.profielfoto }}</td>
+                <td>{{ user.idkaartnummer }}</td>
+                <td>{{ user.iban }}</td>
+                <td>{{ user.facebook }}</td>
+                <td>{{ user.linkedin }}</td>
+                <td>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="26">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

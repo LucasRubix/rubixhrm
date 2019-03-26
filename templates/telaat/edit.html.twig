@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Telaat{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header maincolor whitetext">
+        Edit Telaat    </div>
+
+    <div class="card-body">
+    {{ include('telaat/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('telaat_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    {{ include('telaat/_delete_form.html.twig') }}
+
+    </div>
+</div>
+{% endblock %}

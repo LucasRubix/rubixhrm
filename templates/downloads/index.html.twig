@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Downloads index{% endblock %}
+
+{% block body %}
+    <h1>Downloads index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+                <th>Id</th>
+                <th>Naam</th>
+                <th>Downloadlink</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for download in downloads %}
+            <tr>
+                <td>{{ download.id }}</td>
+                <td>{{ download.naam }}</td>
+                <td>{{ download.downloadlink }}</td>
+                <td>
+                    <a href="{{ path('downloads_show', {'id': download.id}) }}">show</a>
+                    <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('downloads_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}

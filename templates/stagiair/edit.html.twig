@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Stagiair{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header maincolor whitetext">
+        Edit Stagiair    </div>
+
+    <div class="card-body">
+    {{ include('stagiair/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('stagiair_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    {{ include('stagiair/_delete_form.html.twig') }}
+
+    </div>
+</div>
+{% endblock %}
