@@ -35,7 +35,7 @@ class User extends BaseUser
     private $achternaam;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $geboortedatum;
 
@@ -60,7 +60,7 @@ class User extends BaseUser
     private $plaats;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $profielfoto;
 
