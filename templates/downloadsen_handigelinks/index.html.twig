@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DownloadsenHandigelinksController!{% endblock %}
+
+{% block body %}
+
+
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="maincolor">
+                <tr class="whitetext">
+{#                    <th>Id</th>#}
+                    <th class="text-center">Naam</th>
+{#                    <th>Downloadlink</th>#}
+                    {% if is_granted("ROLE_SUPER_ADMIN") %}
+                    <th>actions</th>
+                    {% endif %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for download in downloads %}
+                    <tr>
+{#                        <td>{{ download.id }}</td>#}
+                        <td class="text-center"><a href="{{ download.downloadlink }}" target="_blank">{{ download.naam }}</a></td>
+{#                        <td>{{ download.downloadlink }}</td>#}
+                        {% if is_granted("ROLE_SUPER_ADMIN") %}
+                        <td>
+                            <a href="{{ path('downloads_show', {'id': download.id}) }}">show</a>
+                            <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+
+{% endblock %}

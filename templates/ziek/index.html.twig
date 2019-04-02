@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ziek index{% endblock %}
+
+{% block body %}
+    <h1>Ziek index</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+            <tr class="whitetext">
+{#                <th>Id</th>#}
+                <th>Datum</th>
+                <th>Datumbeter</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ziek in zieks %}
+            <tr>
+{#                <td>{{ ziek.id }}</td>#}
+                <td>{{ ziek.datum ? ziek.datum|date('Y-m-d') : '' }}</td>
+                <td>{{ ziek.datumbeter ? ziek.datumbeter|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('ziek_show', {'id': ziek.id}) }}">show</a>
+                    <a href="{{ path('ziek_edit', {'id': ziek.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('ziek_new') }}" class="btn btn-success greenbutton">Create new</a>
+{% endblock %}
