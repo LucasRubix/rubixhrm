@@ -13,11 +13,11 @@ class DownloadsenHandigelinksController extends AbstractController
     /**
      * @Route("/downloadsen/handigelinks", name="downloadsen_handigelinks")
      */
-    public function index(DownloadsRepository $downloadsRepository)
+    public function index(DownloadsRepository $downloadsRepository, HandigeLinksRepository $handigeLinksRepository)
     {
         return $this->render('downloadsen_handigelinks/index.html.twig', [
             'controller_name' => 'DownloadsenHandigelinksController',
-            'downloads' => $downloadsRepository->findAll()]);
-
+            'downloads' => $downloadsRepository->findAll(),
+            'handige_links' => $handigeLinksRepository->findAll()]);
     }
 }
