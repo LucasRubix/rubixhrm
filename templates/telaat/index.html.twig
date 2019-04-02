@@ -8,18 +8,20 @@
     <table class="table table-striped">
         <thead class="maincolor">
             <tr class="whitetext">
-                <th>Id</th>
+{#                <th>Id</th>#}
                 <th>Datum</th>
                 <th>Tijd</th>
+                <th>Naam</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for telaat in telaats %}
             <tr>
-                <td>{{ telaat.id }}</td>
+{#                <td>{{ telaat.id }}</td>#}
                 <td>{{ telaat.datum ? telaat.datum|date('Y-m-d') : '' }}</td>
                 <td>{{ telaat.tijd ? telaat.tijd|date('H:i:s') : '' }}</td>
+                <td>{{ telaat.userId }}</td>
                 <td>
                     <a href="{{ path('telaat_show', {'id': telaat.id}) }}">show</a>
                     <a href="{{ path('telaat_edit', {'id': telaat.id}) }}">edit</a>

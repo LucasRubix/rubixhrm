@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Vrijvragen;
 use App\Form\VrijvragenType;
+use App\Repository\TelaatRepository;
+use App\Repository\ZiekRepository;
 use App\Repository\VrijvragenRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,11 +20,28 @@ class VrijvragenController extends AbstractController
     /**
      * @Route("/", name="vrijvragen_index", methods={"GET"})
      */
-    public function index(VrijvragenRepository $vrijvragenRepository): Response
+    public function index(VrijvragenRepository $vrijvragenRepository, TelaatRepository $telaatRepository, ZiekRepository $ziekRepository): Response
     {
-        return $this->render('vrijvragen/index.html.twig', [
-            'vrijvragens' => $vrijvragenRepository->findAll(),
-        ]);
+
+        if ($this->isGranted("ROLE_SUPER_ADMIN")){
+
+            return $this->render('vrijvragen/index.html.twig', ['telaats' => $telaatRepository->findAll(), 'ziek' => $ziekRepository->findAll()]);
+        } else {
+
+            return $this->render('vrijvragen/index.html.twig', [
+                'telaats' => $telaatRepository->findBy(
+                    [
+                        'User_id' => $this->getUser()
+                    ]
+                ),
+                'zieks' => $ziekRepository->findBy(
+                    [
+                        'User_id' => $this->getUser()
+                    ]
+                ),
+                'vrijvragens' => $vrijvragenRepository->findAll(),
+            ]);
+        }
     }
 
     /**

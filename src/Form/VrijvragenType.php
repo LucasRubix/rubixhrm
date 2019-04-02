@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Vrijvragen;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,7 +19,9 @@ class VrijvragenType extends AbstractType
             ->add('begintijd')
             ->add('eindtijd')
             ->add('reden')
-            ->add('goedgekeurd')
+            ->add('goedgekeurd', ChoiceType::class, [
+                'choices' => ['In Behandeling' => 'behandeling','Goedgekeurd' => 'goedgekeurd', 'Afgekeurd' => 'afgekeurd' ],
+            ])
             ->add('User_id')
         ;
     }
