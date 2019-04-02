@@ -22,7 +22,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'behandeling' %}
+{#                {% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'behandeling' %}#}
+{% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'behandeling' %}
 
                 <tr>
 {#                            <td>{{ vrijvragen.id }}</td>#}
@@ -65,7 +66,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'goedgekeurd' %}
+                  {% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'goedgekeurd' %}
 
                 <tr>
 {#                            <td>{{ vrijvragen.id }}</td>#}

@@ -25,7 +25,7 @@ class VrijvragenController extends AbstractController
 
         if ($this->isGranted("ROLE_SUPER_ADMIN")){
 
-            return $this->render('vrijvragen/index.html.twig', ['telaats' => $telaatRepository->findAll(), 'ziek' => $ziekRepository->findAll()]);
+            return $this->render('vrijvragen/index.html.twig', ['telaats' => $telaatRepository->findAll(), 'zieks' => $ziekRepository->findAll(), 'vrijvragens' => $ziekRepository->findAll()]);
         } else {
 
             return $this->render('vrijvragen/index.html.twig', [
