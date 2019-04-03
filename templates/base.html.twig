@@ -27,7 +27,7 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 {% if app.user %}
-                    <a href="{{ path('fos_user_profile_show') }}" class="btn btn-success greenbutton my-2 my-sm-0 mr-3"><i class="far fa-user"></i>&nbsp;{{ app.user.naam }}</a>
+                    <a href="{{ path('fos_user_profile_show') }}" class="btn btn-success greenbutton my-2 my-sm-0 mr-3"><i class="fas fa-user"></i>&nbsp;{{ app.user.naam }}</a>
                     <a href="{{ path('fos_user_security_logout') }}" class="btn btn-success greenbutton my-2 my-sm-0 mr-3">Logout</a>
                 {% else %}
                 <a href="{{ path('fos_user_security_login') }}" class="btn btn-success greenbutton my-2 my-sm-0 mr-3">Login</a>

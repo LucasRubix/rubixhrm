@@ -14,7 +14,7 @@
                     <th class="text-center">Downloadlinks</th>
 {#                    <th>Downloadlink</th>#}
                     {% if is_granted("ROLE_SUPER_ADMIN") %}
-                    <th>actions</th>
+                    <th></th>
                     {% endif %}
                 </tr>
                 </thead>
@@ -26,8 +26,8 @@
 {#                        <td>{{ download.downloadlink }}</td>#}
                         {% if is_granted("ROLE_SUPER_ADMIN") %}
                         <td>
-                            <a href="{{ path('downloads_show', {'id': download.id}) }}">show</a>
-                            <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>
+                            <a href="{{ path('downloads_show', {'id': download.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a href="{{ path('downloads_edit', {'id': download.id}) }}"><i class="fas fa-edit"></i></a>
                         </td>
                         {% endif %}
                     </tr>
@@ -47,7 +47,7 @@
                     <th class="text-center">Handige links</th>
 {#                    <th>Downloadlink</th>#}
                     {% if is_granted("ROLE_SUPER_ADMIN") %}
-                    <th>actions</th>
+                    <th></th>
                     {% endif %}
                 </tr>
                 </thead>
@@ -59,8 +59,8 @@
 {#                        <td>{{ handige_link.downloadlink }}</td>#}
                         {% if is_granted("ROLE_SUPER_ADMIN") %}
                         <td>
-                            <a href="{{ path('handige_links_show', {'id': handige_link.id}) }}">show</a>
-                            <a href="{{ path('handige_links_edit', {'id': handige_link.id}) }}">edit</a>
+                            <a href="{{ path('handige_links_show', {'id': handige_link.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a href="{{ path('handige_links_edit', {'id': handige_link.id}) }}"><i class="fas fa-edit"></i></a>
                         </td>
                         {% endif %}
                     </tr>

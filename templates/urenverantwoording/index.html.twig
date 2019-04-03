@@ -8,20 +8,20 @@
     <table class="table table-striped">
         <thead class="maincolor">
             <tr class="whitetext">
-                <th>Id</th>
+{#                <th>Id</th>#}
                 <th>Datum</th>
                 <th>Uren</th>
                 <th>Begintijd</th>
                 <th>Eindtijd</th>
                 <th>Omschrijving</th>
                 <th>Goedgekeurd</th>
-                <th>actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for urenverantwoording in urenverantwoordings %}
             <tr>
-                <td>{{ urenverantwoording.id }}</td>
+{#                <td>{{ urenverantwoording.id }}</td>#}
                 <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
                 <td>{{ urenverantwoording.uren }}</td>
                 <td>{{ urenverantwoording.begintijd ? urenverantwoording.begintijd|date('Y-m-d') : '' }}</td>
@@ -29,8 +29,8 @@
                 <td>{{ urenverantwoording.omschrijving }}</td>
                 <td>{{ urenverantwoording.goedgekeurd ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}">show</a>
-                    <a href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}">edit</a>
+                    <a href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
         {% else %}

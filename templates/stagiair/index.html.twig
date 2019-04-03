@@ -18,7 +18,7 @@
                 <th>Emailadres Contactpersoon</th>
                 <th>Telefoonnummer Contactpersoon</th>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
-                <th>actions</th>
+                <th></th>
                 {% endif %}
             </tr>
         </thead>
@@ -36,8 +36,8 @@
                 <td>{{ stagiair.contactpersoonTelefoonnr }}</td>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
                 <td>
-                    <a class="btn btn-success greenbutton mb-2" href="{{ path('stagiair_show', {'id': stagiair.id}) }}">show</a>
-                    <a class="btn btn-warning" href="{{ path('stagiair_edit', {'id': stagiair.id}) }}">edit</a>
+                    <a class="btn btn-success greenbutton mb-2" href="{{ path('stagiair_show', {'id': stagiair.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-warning" href="{{ path('stagiair_edit', {'id': stagiair.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
                 {% endif %}
             </tr>
@@ -62,7 +62,7 @@
             <th>Uren te gaan</th>
             <th>Dagen te gaan</th>
             {% if is_granted("ROLE_SUPER_ADMIN") %}
-                <th>actions</th>
+                <th></th>
             {% endif %}
         </tr>
         </thead>
@@ -96,8 +96,8 @@
                 <td>{{ dagenLeft|round }}</td>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
                     <td>
-                        <a class="btn btn-success greenbutton" href="{{ path('stagiair_show', {'id': stagiair.id}) }}">show</a>
-                        <a class="btn btn-warning" href="{{ path('stagiair_edit', {'id': stagiair.id}) }}">edit</a>
+                        <a class="btn btn-success greenbutton" href="{{ path('stagiair_show', {'id': stagiair.id}) }}"><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-warning" href="{{ path('stagiair_edit', {'id': stagiair.id}) }}"><i class="fas fa-edit"></i></a>
                     </td>
                 {% endif %}
             </tr>

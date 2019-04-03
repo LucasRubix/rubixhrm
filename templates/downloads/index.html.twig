@@ -8,21 +8,21 @@
     <table class="table table-striped">
         <thead class="maincolor">
             <tr class="whitetext">
-                <th>Id</th>
+{#                <th>Id</th>#}
                 <th>Naam</th>
                 <th>Downloadlink</th>
-                <th>actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for download in downloads %}
             <tr>
-                <td>{{ download.id }}</td>
+{#                <td>{{ download.id }}</td>#}
                 <td>{{ download.naam }}</td>
                 <td>{{ download.downloadlink }}</td>
                 <td>
-                    <a href="{{ path('downloads_show', {'id': download.id}) }}">show</a>
-                    <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>
+                    <a href="{{ path('downloads_show', {'id': download.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('downloads_edit', {'id': download.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
         {% else %}

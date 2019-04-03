@@ -13,30 +13,31 @@
 {#                    <th>Id</th>#}
                     <th>Begindatum</th>
 {#                    <th>Einddatum</th>#}
-                    <th>Uren</th>
+                    <th>Naam</th>
 {#                    <th>Begintijd</th>#}
 {#                    <th>Eindtijd</th>#}
                     <th>Reden</th>
 {#                    <th>Goedgekeurd</th>#}
-                    <th>actions</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
 {#                {% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'behandeling' %}#}
-{% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'behandeling' %}
+{% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == NULL %}
 
                 <tr>
 {#                            <td>{{ vrijvragen.id }}</td>#}
                             <td>{{ vrijvragen.begindatum ? vrijvragen.begindatum|date('Y-m-d') : '' }}</td>
 {#                            <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>#}
-                            <td>{{ vrijvragen.uren }}</td>
+                            <td>{{ vrijvragen.userId }}</td>
 {#                            <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>#}
 {#                            <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>#}
                             <td>{{ vrijvragen.reden }}</td>
 {#                            <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>#}
                             <td>
-                                <a href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}">show</a>
-                                <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}">edit</a>
+                                <a class="btn btn-success greenbutton mb-3" href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}"><i class="fas fa-eye"></i></a>
+                                <a class="btn btn-warning" href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}"><i class="fas fa-edit"></i></a>
+
                             </td>
                         </tr>
 
@@ -57,12 +58,12 @@
 {#                    <th>Id</th>#}
                     <th>Begindatum</th>
 {#                    <th>Einddatum</th>#}
-                    <th>Uren</th>
+                    <th>Naam</th>
 {#                    <th>Begintijd</th>#}
 {#                    <th>Eindtijd</th>#}
                     <th>Reden</th>
 {#                    <th>Goedgekeurd</th>#}
-                    <th>actions</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -72,14 +73,14 @@
 {#                            <td>{{ vrijvragen.id }}</td>#}
                             <td>{{ vrijvragen.begindatum ? vrijvragen.begindatum|date('Y-m-d') : '' }}</td>
 {#                            <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>#}
-                            <td>{{ vrijvragen.uren }}</td>
+                            <td>{{ vrijvragen.userId }}</td>
 {#                            <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>#}
 {#                            <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>#}
                             <td>{{ vrijvragen.reden }}</td>
 {#                            <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>#}
                             <td>
-                                <a href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}">show</a>
-                                <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}">edit</a>
+                                <a class="btn btn-success greenbutton mb-3" href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}"><i class="fas fa-eye"></i></a>
+                                <a class="btn btn-warning" href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}"><i class="fas fa-edit"></i></a>
                             </td>
                         </tr>
                     {% else %}
@@ -99,12 +100,12 @@
                     {#                    <th>Id</th>#}
                     <th>Begindatum</th>
                     {#                    <th>Einddatum</th>#}
-                    <th>Uren</th>
+                    <th>Naam</th>
                     {#                    <th>Begintijd</th>#}
                     {#                    <th>Eindtijd</th>#}
                     <th>Reden</th>
                     {#                    <th>Goedgekeurd</th>#}
-                    <th>actions</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -113,14 +114,14 @@
                             {#                            <td>{{ vrijvragen.id }}</td>#}
                             <td>{{ vrijvragen.begindatum ? vrijvragen.begindatum|date('Y-m-d') : '' }}</td>
                             {#                            <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>#}
-                            <td>{{ vrijvragen.uren }}</td>
+                            <td>{{ vrijvragen.userId }}</td>
                             {#                            <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>#}
                             {#                            <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>#}
                             <td>{{ vrijvragen.reden }}</td>
                             {#                            <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>#}
                             <td>
-                                <a href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}">show</a>
-                                <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}">edit</a>
+                                <a href="{{ path('vrijvragen_show', {'id': vrijvragen.id}) }}"><i class="fas fa-eye"></i></a>
+                                <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}"><i class="fas fa-edit"></i></a>
                             </td>
                         </tr>
                 {% else %}
@@ -144,7 +145,7 @@
                     {#                <th>Id</th>#}
                     <th>Datum</th>
                     <th>Datumbeter</th>
-                    <th>actions</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -154,8 +155,8 @@
                         <td>{{ ziek.datum ? ziek.datum|date('Y-m-d') : '' }}</td>
                         <td>{{ ziek.datumbeter ? ziek.datumbeter|date('Y-m-d') : '' }}</td>
                         <td>
-                            <a href="{{ path('ziek_show', {'id': ziek.id}) }}">show</a>
-                            <a href="{{ path('ziek_edit', {'id': ziek.id}) }}">edit</a>
+                            <a href="{{ path('ziek_show', {'id': ziek.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a href="{{ path('ziek_edit', {'id': ziek.id}) }}"><i class="fas fa-edit"></i></a>
                         </td>
                     </tr>
                 {% else %}
@@ -177,7 +178,7 @@
                     <th>Datum</th>
                     <th>Tijd</th>
                     <th>Naam</th>
-                    <th>actions</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -188,8 +189,8 @@
                         <td>{{ telaat.tijd ? telaat.tijd|date('H:i:s') : '' }}</td>
                         <td>{{ telaat.userId }}</td>
                         <td>
-                            <a href="{{ path('telaat_show', {'id': telaat.id}) }}">show</a>
-                            <a href="{{ path('telaat_edit', {'id': telaat.id}) }}">edit</a>
+                            <a class="btn btn-success greenbutton" href="{{ path('telaat_show', {'id': telaat.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-warning" href="{{ path('telaat_edit', {'id': telaat.id}) }}"><i class="fas fa-edit"></i></a>
                         </td>
                     </tr>
                 {% else %}
