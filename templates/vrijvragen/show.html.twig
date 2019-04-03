@@ -46,9 +46,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('vrijvragen_index') }}" class="btn btn-primary bluebutton">back to list</a>
+    <a href="{{ path('vrijvragen_index') }}" class="btn btn-primary bluebutton"><i class="fas fa-backward"></i></a>
 
-    <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}" class="btn btn-success greenbutton float-right">edit</a>
+    <a href="{{ path('vrijvragen_edit', {'id': vrijvragen.id}) }}" class="btn btn-success greenbutton float-right"><i class="fas fa-edit"></i></a>
 
     {{ include('vrijvragen/_delete_form.html.twig') }}
 {% endblock %}

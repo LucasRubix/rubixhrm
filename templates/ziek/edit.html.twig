@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Ziek{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header maincolor whitetext">
+        Edit Ziek    </div>
+
+    <div class="card-body">
+    {{ include('ziek/_form.html.twig', {'button_label': 'Update'}) }}
+
+        <a href="{{ path('ziek_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    {{ include('ziek/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

@@ -6,34 +6,40 @@
     <h1>Stagiair index</h1>
 
     <table class="table table-striped">
-        <thead class="maincolor">
+        <thead class="maincolor text-center">
             <tr class="whitetext">
-                <th>Id</th>
-                <th>Urentotaal</th>
+{#                <th>Id</th>#}
+{#                <th>Urentotaal</th>#}
+                <th>Naam</th>
                 <th>Begindatum</th>
                 <th>Einddatum</th>
                 <th>School</th>
                 <th>Contactpersoon</th>
-                <th>Contactpersoon_email</th>
-                <th>Contactpersoon_telefoonnr</th>
-                <th>actions</th>
+                <th>Emailadres Contactpersoon</th>
+                <th>Telefoonnummer Contactpersoon</th>
+                {% if is_granted("ROLE_SUPER_ADMIN") %}
+                <th></th>
+                {% endif %}
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
         {% for stagiair in stagiairs %}
             <tr>
-                <td>{{ stagiair.id }}</td>
-                <td>{{ stagiair.urentotaal }}</td>
+{#                <td>{{ stagiair.id }}</td>#}
+{#                <td>{{ stagiair.urentotaal }}</td>#}
+                <td>{{ stagiair.userId }}</td>
                 <td>{{ stagiair.begindatum ? stagiair.begindatum|date('Y-m-d') : '' }}</td>
                 <td>{{ stagiair.einddatum ? stagiair.einddatum|date('Y-m-d') : '' }}</td>
                 <td>{{ stagiair.school }}</td>
                 <td>{{ stagiair.contactpersoon }}</td>
                 <td>{{ stagiair.contactpersoonEmail }}</td>
                 <td>{{ stagiair.contactpersoonTelefoonnr }}</td>
+                {% if is_granted("ROLE_SUPER_ADMIN") %}
                 <td>
-                    <a href="{{ path('stagiair_show', {'id': stagiair.id}) }}">show</a>
-                    <a href="{{ path('stagiair_edit', {'id': stagiair.id}) }}">edit</a>
+                    <a class="btn btn-success greenbutton mb-2" href="{{ path('stagiair_show', {'id': stagiair.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-warning" href="{{ path('stagiair_edit', {'id': stagiair.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
+                {% endif %}
             </tr>
         {% else %}
             <tr>
@@ -43,5 +49,65 @@
         </tbody>
     </table>
 
-    <a href="{{ path('stagiair_new') }}" class="btn btn-success greenbutton">Create new</a>
+
+    <table class="table table-striped mt-5">
+        <thead class="maincolor text-center">
+        <tr class="whitetext">
+            {#                <th>Id</th>#}
+            <th>Uren totaal</th>
+            <th>Uren per dag</th>
+            <th>Dagen totaal</th>
+            <th>Dagen sinds start</th>
+            <th>Uren sinds start</th>
+            <th>Uren te gaan</th>
+            <th>Dagen te gaan</th>
+            {% if is_granted("ROLE_SUPER_ADMIN") %}
+                <th></th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        {% for stagiair in stagiairs %}
+
+            {% set aantaldagen = stagiair.urentotaal / stagiair.urenperdag %}
+            {% set vandaag = "now"|date('Y-m-d') %}
+
+            {% set difference = date(stagiair.begindatum).diff(date(vandaag)) %}
+            {% set leftDays = difference.days %}
+            {% set leftDaysNoWeekend = leftDays / 7 * 5 %}
+            {% set urenSindsStart = leftDaysNoWeekend * stagiair.urenperdag %}
+            {% set urenLeft = stagiair.urentotaal - urenSindsStart %}
+            {% set dagenLeft = urenLeft / stagiair.urenperdag %}
+
+
+            <tr>
+                <td>{{ stagiair.urentotaal }}</td>
+                <td>{{ stagiair.urenperdag }}</td>
+
+                {#<td>{{ stagiair.id }}</td>#}
+                {% if stagiair.urenperdag != NULL %}
+                <td>{{ aantaldagen }} dagen </td>
+                    {% else %}
+                    <td>N.V.T</td>
+                {% endif %}
+                <td>{{ leftDaysNoWeekend|round }}</td>
+                <td>{{ urenSindsStart|round }}</td>
+                <td>{{ urenLeft|round }}</td>
+                <td>{{ dagenLeft|round }}</td>
+                {% if is_granted("ROLE_SUPER_ADMIN") %}
+                    <td>
+                        <a class="btn btn-success greenbutton" href="{{ path('stagiair_show', {'id': stagiair.id}) }}"><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-warning" href="{{ path('stagiair_edit', {'id': stagiair.id}) }}"><i class="fas fa-edit"></i></a>
+                    </td>
+                {% endif %}
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{#    <a href="{{ path('stagiair_new') }}" class="btn btn-success greenbutton">Create new</a>#}
 {% endblock %}

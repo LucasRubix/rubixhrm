@@ -8,21 +8,21 @@
     <table class="table table-striped">
         <thead class="maincolor">
             <tr class="whitetext">
-                <th>Id</th>
+{#                <th>Id</th>#}
                 <th>Unaam</th>
                 <th>Downloadlink</th>
-                <th>actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for handige_link in handige_links %}
             <tr>
-                <td>{{ handige_link.id }}</td>
+{#                <td>{{ handige_link.id }}</td>#}
                 <td>{{ handige_link.Unaam }}</td>
                 <td>{{ handige_link.downloadlink }}</td>
                 <td>
-                    <a href="{{ path('handige_links_show', {'id': handige_link.id}) }}">show</a>
-                    <a href="{{ path('handige_links_edit', {'id': handige_link.id}) }}">edit</a>
+                    <a class="btn btn-success greenbutton" href="{{ path('handige_links_show', {'id': handige_link.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-warning" href="{{ path('handige_links_edit', {'id': handige_link.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
         {% else %}
