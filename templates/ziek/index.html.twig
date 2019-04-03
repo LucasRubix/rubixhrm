@@ -21,8 +21,8 @@
                 <td>{{ ziek.datum ? ziek.datum|date('Y-m-d') : '' }}</td>
                 <td>{{ ziek.datumbeter ? ziek.datumbeter|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('ziek_show', {'id': ziek.id}) }}">show</a>
-                    <a href="{{ path('ziek_edit', {'id': ziek.id}) }}">edit</a>
+                    <a class="btn btn-success greenbutton" href="{{ path('ziek_show', {'id': ziek.id}) }}">show</a>
+                    <a class="btn btn-warning" href="{{ path('ziek_edit', {'id': ziek.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}

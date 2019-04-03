@@ -59,8 +59,8 @@
 {#                        <td>{{ handige_link.downloadlink }}</td>#}
                         {% if is_granted("ROLE_SUPER_ADMIN") %}
                         <td>
-                            <a href="{{ path('handige_links_show', {'id': handige_link.id}) }}"><i class="fas fa-eye"></i></a>
-                            <a href="{{ path('handige_links_edit', {'id': handige_link.id}) }}"><i class="fas fa-edit"></i></a>
+                            <a class="btn btn-success greenbutton" href="{{ path('handige_links_show', {'id': handige_link.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-warning" href="{{ path('handige_links_edit', {'id': handige_link.id}) }}"><i class="fas fa-edit"></i></a>
                         </td>
                         {% endif %}
                     </tr>
