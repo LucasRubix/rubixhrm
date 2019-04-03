@@ -14,7 +14,7 @@
                 <th>Datum</th>
                 <th>Foto</th>
                 {% if is_granted('ROLE_SUPER_ADMIN') %}
-                <th>actions</th>
+                <th></th>
                 {% endif %}
             </tr>
         </thead>
@@ -28,8 +28,8 @@
                 <td>{{ nieuw.foto }}</td>
                 {% if is_granted('ROLE_SUPER_ADMIN') %}
                 <td>
-                    <a href="{{ path('nieuws_show', {'id': nieuw.id}) }}">show</a>
-                    <a href="{{ path('nieuws_edit', {'id': nieuw.id}) }}">edit</a>
+                    <a class="btn btn-success greenbutton" href="{{ path('nieuws_show', {'id': nieuw.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-warning" href="{{ path('nieuws_edit', {'id': nieuw.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
                 {% endif %}
 

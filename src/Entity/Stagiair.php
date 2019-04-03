@@ -56,6 +56,20 @@ class Stagiair
      */
     private $contactpersoon_telefoonnr;
 
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $urenperdag;
+
+    public function __construct()
+    {
+        /* Zorgt dat in /new de huidige datum en tijd wordeb weergeven */
+
+        $this->begindatum = new \DateTime();
+        $this->einddatum = new \DateTime();
+
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +167,18 @@ class Stagiair
     public function setContactpersoonTelefoonnr(?string $contactpersoon_telefoonnr): self
     {
         $this->contactpersoon_telefoonnr = $contactpersoon_telefoonnr;
+
+        return $this;
+    }
+
+    public function getUrenperdag()
+    {
+        return $this->urenperdag;
+    }
+
+    public function setUrenperdag($urenperdag): self
+    {
+        $this->urenperdag = $urenperdag;
 
         return $this;
     }
