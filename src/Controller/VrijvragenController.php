@@ -60,6 +60,7 @@ class VrijvragenController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $vrijvragen->setUserId($this->getUser());
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($vrijvragen);
             $entityManager->flush();
