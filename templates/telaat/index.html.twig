@@ -12,7 +12,7 @@
                 <th>Datum</th>
                 <th>Tijd</th>
                 <th>Naam</th>
-                <th>actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -23,8 +23,8 @@
                 <td>{{ telaat.tijd ? telaat.tijd|date('H:i:s') : '' }}</td>
                 <td>{{ telaat.userId }}</td>
                 <td>
-                    <a href="{{ path('telaat_show', {'id': telaat.id}) }}">show</a>
-                    <a href="{{ path('telaat_edit', {'id': telaat.id}) }}">edit</a>
+                    <a class="btn btn-success greenbutton" href="{{ path('telaat_show', {'id': telaat.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-warning" href="{{ path('telaat_edit', {'id': telaat.id}) }}"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
         {% else %}

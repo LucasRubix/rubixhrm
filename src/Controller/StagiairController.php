@@ -20,9 +20,20 @@ class StagiairController extends AbstractController
      */
     public function index(StagiairRepository $stagiairRepository): Response
     {
-        return $this->render('stagiair/index.html.twig', [
-            'stagiairs' => $stagiairRepository->findAll(),
-        ]);
+
+        if ($this->isGranted("ROLE_SUPER_ADMIN")){
+
+            return $this->render('stagiair/index.html.twig', ['stagiairs' => $stagiairRepository->findAll()]);
+        } else {
+
+            return $this->render('stagiair/index.html.twig', [
+                'stagiairs' => $stagiairRepository->findBy(
+                    [
+                        'User_id' => $this->getUser()
+                    ]
+                ),
+            ]);
+        }
     }
 
     /**
