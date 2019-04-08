@@ -29,7 +29,7 @@ class VrijvragenType extends AbstractType
             ->add('begintijd')
             ->add('eindtijd')
             ->add('reden')
-            ->add('User_id');
+            ->add('User_id', null, array('attr'=>array('style' => 'display:none')));
 
             if ( $this->security->isGranted( "ROLE_SUPER_ADMIN" ) ) {
                 $builder
