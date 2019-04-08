@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ziek{% endblock %}
+
+{% block body %}
+    <h1>Ziek</h1>
+
+    <table class="table table-striped">
+        <thead class="maincolor">
+        <tr class="whitetext">
+            <th>Ziek</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ziek.id }}</td>
+            </tr>
+            <tr>
+                <th>Datum</th>
+                <td>{{ ziek.datum ? ziek.datum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Datumbeter</th>
+                <td>{{ ziek.datumbeter ? ziek.datumbeter|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('ziek_index') }}" class="btn btn-primary bluebutton">back to list</a>
+
+    <a href="{{ path('ziek_edit', {'id': ziek.id}) }}" class="btn btn-success greenbutton float-right">edit</a>
+
+    {{ include('ziek/_delete_form.html.twig') }}
+{% endblock %}
