@@ -104,9 +104,9 @@
 
                 <table class="table table-responsive">
 
-                    {% set datum = "now"|date("m/d/Y") %}
+                    {% set datum = "now"|date("m-d-Y") %}
 
-                    {% for key in vrijvragen if key.goedgekeurd == 'goedgekeurd' and key.einddatum < datum %}
+                    {% for key in vrijvragen if key.goedgekeurd == 'goedgekeurd' and key.einddatum|date("m-d-Y") >= datum %}
 
                     <tr>
 
