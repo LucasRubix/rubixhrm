@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="842f881f-a7ea-4d1c-9192-2990b3fc260a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
@@ -121,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+            <state relative-caret-position="340">
+              <caret line="136" column="85" lean-forward="true" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -359,7 +358,7 @@
       <workItem from="1554215303793" duration="16026000" />
       <workItem from="1554458488069" duration="4770000" />
       <workItem from="1554707295493" duration="1847000" />
-      <workItem from="1554723218580" duration="1284000" />
+      <workItem from="1554723218580" duration="2106000" />
     </task>
     <task id="LOCAL-00001" summary="home pagina">
       <created>1554290458105</created>
@@ -375,11 +374,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554471864763</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="JAH">
+      <created>1554728141089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554728141089</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39621000" />
+    <option name="totallyTimeSpent" value="40443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -412,7 +418,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="home pagina" />
     <MESSAGE value="home pagina update" />
-    <option name="LAST_COMMIT_MESSAGE" value="home pagina update" />
+    <MESSAGE value="JAH" />
+    <option name="LAST_COMMIT_MESSAGE" value="JAH" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Resources/FOSUserBundle/views/Registration/register.html.twig">
@@ -570,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+        <state relative-caret-position="340">
+          <caret line="136" column="85" lean-forward="true" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
         </state>
       </provider>
     </entry>
