@@ -6,6 +6,9 @@
     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
 
+
+
+
         <div class="row">
 
             <div class="jumbotron text-center col-md-12">
@@ -73,88 +76,171 @@
 
         </div>
 
+
+
         <div class="row">
 
-            <div class="jumbotron text-center col-md-5">
 
-                <h1 class="display-4">Nieuws</h1>
-
-                <hr class="my-4">
-
-                {% for nieuw in nieuws|slice(0, 5) %}
-
-                    <h3 class="display-5">{{ nieuw.titel }}</h3>
-                    {{ nieuw.datum ? nieuw.datum|date('Y-m-d') : '' }}
-                    <p class="text-justify">{{ nieuw.omschrijving }}</p>
-                    {{ nieuw.foto }}
+            <div class="div col-md-5">
 
 
-                {% endfor %}
+                <div class="card bot" style="background-color: whitesmoke;">
+
+                    <div class="card-header maincolor whitetext">
+                        Nieuws
+                    </div>
+
+                    <div class="card-body">
+
+                        {% for nieuw in nieuws|slice(0, 5) %}
+
+                            <h4 class="card-title text-center">{{ nieuw.titel }}</h4>
+                            <h5 class="card-title text-center">{{ nieuw.datum ? nieuw.datum|date('Y-m-d') : '' }}</h5>
+                            <p class="card-text text-justify">{{ nieuw.omschrijving }}</p>
+                            {{ nieuw.foto }}
+
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="col-md-1"></div>
 
 
-            <div class="jumbotron text-center col-md-6">
 
-                <h1 class="display-4">Afwezig</h1>
-
-                <hr class="my-4">
-
-                <table class="table table-responsive">
-
-                    {% set datum = "now"|date("m-d-Y") %}
-
-                    {% for key in vrijvragen if key.goedgekeurd == 'goedgekeurd' and key.einddatum|date("m-d-Y") >= datum %}
-
-                    <tr>
-
-                        <th>Naam</th>
-                        <th>Begindatum</th>
-                        <th>Einddatum</th>
-                        <th>Reden</th>
-                        <th>Begintijd</th>
-                        <th>Eindtijd</th>
-
-                    </tr>
+            <div class="div col-md-7">
 
 
-                    <tr>
+                <div class="card bot" style="background-color: whitesmoke;">
 
-                        <td>{{ key.userId.naam }}</td>
-                        <td>{{ key.begindatum|date('m-d-Y') }}</td>
-                        <td>{{ key.einddatum|date('m-d-Y') }}</td>
-                        <td>{{ key.reden }}</td>
-                        <td>{{ key.begintijd|date('H:i') }}</td>
-                        <td>{{ key.eindtijd|date('H:i') }}</td>
+                    <div class="card-header maincolor whitetext">
+                        Afwezig
+                    </div>
+
+                    <div class="card-body">
+
+                        <table class="table table-responsive">
+
+                            {% set datum = "now"|date("m-d-Y") %}
+
+                            {% for key in vrijvragen if key.goedgekeurd == 'goedgekeurd' and key.einddatum|date("m-d-Y") == datum %}
+
+                                <tr>
+
+                                    <th>Naam</th>
+                                    <th>Begindatum</th>
+                                    <th>Einddatum</th>
+                                    <th>Reden</th>
+                                    <th>Begintijd</th>
+                                    <th>Eindtijd</th>
+
+                                </tr>
 
 
-                    </tr>
+                                <tr>
+
+                                    <td>{{ key.userId.naam }}</td>
+                                    <td>{{ key.begindatum|date('m-d-Y') }}</td>
+                                    <td>{{ key.einddatum|date('m-d-Y') }}</td>
+                                    <td>{{ key.reden }}</td>
+                                    <td>{{ key.begintijd|date('H:i') }}</td>
+                                    <td>{{ key.eindtijd|date('H:i') }}</td>
+
+
+                                </tr>
+
+                            {% else %}
+
+                                <h3 class="display-5">Er zijn vandaag geen afwezigen</h3>
+
+                            {% endfor %}
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card bot" style="background-color: whitesmoke;">
+
+                    <div class="card-header maincolor whitetext">
+                        Binnenkort afwezig
+                    </div>
+
+                    <div class="card-body">
+
+                        <table class="table table-responsive">
+
+                            {% set datum = "now"|date("m-d-Y") %}
+
+                            {% for key in vrijvragen if key.goedgekeurd == 'goedgekeurd' and key.einddatum|date("m-d-Y") > datum %}
+
+                                <tr>
+
+                                    <th>Naam</th>
+                                    <th>Begindatum</th>
+                                    <th>Einddatum</th>
+                                    <th>Reden</th>
+                                    <th>Begintijd</th>
+                                    <th>Eindtijd</th>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>{{ key.userId.naam }}</td>
+                                    <td>{{ key.begindatum|date('m-d-Y') }}</td>
+                                    <td>{{ key.einddatum|date('m-d-Y') }}</td>
+                                    <td>{{ key.reden }}</td>
+                                    <td>{{ key.begintijd|date('H:i') }}</td>
+                                    <td>{{ key.eindtijd|date('H:i') }}</td>
+
+
+                                </tr>
+
+                            {% else %}
+
+                                <h3 class="display-5">Binnenkort is er niemand afwezig</h3>
+
+                            {% endfor %}
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card bot" style="background-color: whitesmoke;">
+
+                    <div class="card-header maincolor whitetext">
+                        Vandaag Jarig
+                    </div>
+
+                    <div class="card-body">
+
+                        {% set nu = "now"|date("m/d") %}
+
+                        {% for key in users if key.geboortedatum|date("m/d") == nu %}
+
+                            <h3 class="display-5">Gefeliciteerd {{ key.naam }}!</h3>
 
                         {% else %}
 
-                            <h3 class="display-5">Er zijn vandaag geen afwezigen</h3>
+                            <h3 class="display-5">Er is vandaag niemand jarig</h3>
 
-                    {% endfor %}
+                        {% endfor %}
 
-                </table>
+                    </div>
 
-                <h1 class="display-4">Vandaag Jarig</h1>
-
-                <hr class="my-4">
-
-                    {% set nu = "now"|date("m/d") %}
-
-                {% for key in users if key.geboortedatum|date("m/d") == nu %}
-
-                    <h3 class="display-5">Gefeliciteerd {{ key.naam }}!</h3>
-
-                    {% else %}
-
-                    <h3 class="display-5">Er is vandaag niemand jarig</h3>
-
-                {% endfor %}
+                </div>
 
             </div>
 
