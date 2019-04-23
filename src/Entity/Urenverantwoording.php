@@ -48,9 +48,17 @@ class Urenverantwoording
     private $omschrijving;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $goedgekeurd;
+
+    public function __construct()
+    {
+        $this->datum = new \DateTime();
+        $this->begintijd = new \DateTime();
+        $this->eindtijd = new \DateTime();
+
+    }
 
     public function getId(): ?int
     {

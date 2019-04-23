@@ -26,8 +26,8 @@
 {#                        <td>{{ download.downloadlink }}</td>#}
                         {% if is_granted("ROLE_SUPER_ADMIN") %}
                         <td>
-                            <a href="{{ path('downloads_show', {'id': download.id}) }}"><i class="fas fa-eye"></i></a>
-                            <a href="{{ path('downloads_edit', {'id': download.id}) }}"><i class="fas fa-edit"></i></a>
+                            <a class="btn btn-success greenbutton" href="{{ path('downloads_show', {'id': download.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-warning" href="{{ path('downloads_edit', {'id': download.id}) }}"><i class="fas fa-edit"></i></a>
                         </td>
                         {% endif %}
                     </tr>

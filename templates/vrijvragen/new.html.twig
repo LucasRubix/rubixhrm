@@ -5,11 +5,14 @@
 {% block body %}
 <div class="card">
     <div class="card-header maincolor whitetext">
-        Create new Vrijvragen    </div>
+        Create new Vrijvragen
+    </div>
+
     <div class="card-body">
     {{ include('vrijvragen/_form.html.twig') }}
 
     <a href="{{ path('vrijvragen_index') }}" class="btn btn-primary bluebutton float-left"><i class="fas fa-backward"></i></a>
+
     </div>
 
 </div>
