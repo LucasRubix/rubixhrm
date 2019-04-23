@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="74450f9a-9be1-4c59-bec8-1ae23e4b4265" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -16,6 +17,12 @@
       <change beforePath="$PROJECT_DIR$/src/Resources/FOSUserBundle/views/Profile/edit_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/FOSUserBundle/views/Profile/edit_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Resources/FOSUserBundle/views/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/FOSUserBundle/views/Profile/show_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/vrijvragen/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vrijvragen/new.html.twig" afterDir="false" />
+=======
+    <list default="true" id="74450f9a-9be1-4c59-bec8-1ae23e4b4265" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="a3d57425-f870-4358-af7e-97e3b02b7e03" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+>>>>>>> shahnawaaz
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
@@ -119,13 +126,18 @@
     <ignored path="$PROJECT_DIR$/vendor/webmozart/assert/" />
     <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-code/" />
     <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager/" />
+<<<<<<< HEAD
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
@@ -188,10 +200,23 @@
                 <element signature="e#304#320#0#Twig" expanded="true" />
 =======
   <component name="ComposerSettings" doNotAsk="true">
+=======
+  <component name="FUSProjectUsageTrigger">
+    <session id="1908571670">
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+=======
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+>>>>>>> shahnawaaz
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Resources/FOSUserBundle/views/Profile/show_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -200,21 +225,39 @@
               <folding>
                 <element signature="e#2289#2310#0#Twig" expanded="true" />
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="74" column="94" selection-start-line="74" selection-start-column="94" selection-end-line="74" selection-end-column="94" />
+              <folding>
+                <element signature="e#3388#3412#0#Twig" expanded="true" />
+>>>>>>> shahnawaaz
               </folding>
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/VrijvragenType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DownloadsenHandigelinksController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+>>>>>>> shahnawaaz
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/VrijvragenController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -233,11 +276,19 @@
                 <element signature="e#269#290#0#Twig" expanded="true" />
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
               </folding>
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DownloadsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+>>>>>>> shahnawaaz
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Form/UserType.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -246,11 +297,18 @@
               <folding>
                 <element signature="e#28#48#0#PHP" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/templates/downloads/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" selection-start-line="4" selection-end-line="37" />
+>>>>>>> shahnawaaz
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/templates/vrijvragen/_form.html.twig">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -268,11 +326,27 @@
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/templates/handige_links/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="33" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/downloadsen_handigelinks/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+>>>>>>> shahnawaaz
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+<<<<<<< HEAD
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -285,11 +359,15 @@
       <find>edit</find>
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
     </findStrings>
+=======
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="dev" />
 =======
@@ -311,11 +389,18 @@
       </list>
     </option>
   </component>
+=======
+        <entry key="$PROJECT_DIR$" value="jordy" />
+      </map>
+    </option>
+  </component>
+>>>>>>> shahnawaaz
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+<<<<<<< HEAD
   </component>
 =======
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
@@ -341,6 +426,25 @@
     </option>
   </component>
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+=======
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/handige_links/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/DownloadsController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/DownloadsenHandigelinksController.php" />
+        <option value="$PROJECT_DIR$/templates/downloadsen_handigelinks/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+      </list>
+    </option>
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+  </component>
+>>>>>>> shahnawaaz
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
@@ -448,6 +552,7 @@
     </include_path>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
@@ -462,15 +567,30 @@
     <option name="height" value="797" />
   </component>
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1046" />
+  </component>
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope" />
 =======
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+=======
+      <pane id="Scope" />
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -481,6 +601,7 @@
             <path>
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               <item name="config" type="462c0819:PsiDirectoryNode" />
@@ -495,6 +616,8 @@
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+>>>>>>> shahnawaaz
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -503,6 +626,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
@@ -554,6 +678,10 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> shahnawaaz
             <path>
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
@@ -563,19 +691,28 @@
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="stagiair" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="downloads" type="462c0819:PsiDirectoryNode" />
+>>>>>>> shahnawaaz
             </path>
             <path>
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="user" type="462c0819:PsiDirectoryNode" />
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+              <item name="downloadsen_handigelinks" type="462c0819:PsiDirectoryNode" />
+>>>>>>> shahnawaaz
             </path>
             <path>
               <item name="rubixhrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubixhrm" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="vrijvragen" type="462c0819:PsiDirectoryNode" />
             </path>
 <<<<<<< HEAD
@@ -616,10 +753,16 @@
               <item name="Type" type="462c0819:PsiDirectoryNode" />
             </path>
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+              <item name="handige_links" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </panes>
   </component>
@@ -628,14 +771,27 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony/my-project" />
 =======
       <pane id="Scope" />
+=======
+      <pane id="Scope" />
+    </panes>
+  </component>
+=======
+>>>>>>> shahnawaaz
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
   </component>
+=======
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -660,9 +816,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553690957358</updated>
       <workItem from="1553690958532" duration="981000" />
+<<<<<<< HEAD
       <workItem from="1554109902407" duration="24000" />
       <workItem from="1554109953150" duration="663000" />
       <workItem from="1554279682539" duration="7532000" />
+=======
+>>>>>>> shahnawaaz
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1553691659313</created>
@@ -671,15 +830,23 @@
       <option name="project" value="LOCAL" />
       <updated>1553691659313</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="9380000" />
+=======
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="331000" />
+>>>>>>> shahnawaaz
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -761,6 +928,77 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
 >>>>>>> 728296db3dd9b52eccbbadcfad89d204ca96822b
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+=======
+      <changelist id="a3d57425-f870-4358-af7e-97e3b02b7e03" name="Default Changelist" comment="" />
+      <created>1554188705516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554188705516</updated>
+      <workItem from="1554188706964" duration="2134000" />
+      <workItem from="1554194329772" duration="3210000" />
+      <workItem from="1554198320847" duration="4609000" />
+      <workItem from="1554448243375" duration="3454000" />
+      <workItem from="1554710522486" duration="2590000" />
+      <workItem from="1554794372440" duration="2137000" />
+      <workItem from="1555486972976" duration="676000" />
+      <workItem from="1556005724518" duration="15000" />
+      <workItem from="1556005833774" duration="315000" />
+      <workItem from="1556006174264" duration="1904000" />
+    </task>
+    <task id="LOCAL-00001" summary="2e helft downloads en handige links">
+      <created>1554195817691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554195817691</updated>
+    </task>
+    <task id="LOCAL-00002" summary="downloads en handige links in nav gezet">
+      <created>1554458548367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554458548367</updated>
+    </task>
+    <task id="LOCAL-00003" summary="downloads en handige links in nav gezet">
+      <created>1554461441361</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554461441361</updated>
+    </task>
+    <task id="LOCAL-00004" summary="downloads en handige links in nav gezet">
+      <created>1554461584376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554461584376</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test">
+      <created>1556006286495</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556006286495</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21044000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> shahnawaaz
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -770,6 +1008,7 @@
 <<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4986577" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013423" side_tool="true" weight="0.32907802" />
 =======
@@ -810,10 +1049,27 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+=======
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4989339" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49520257" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.50479746" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+>>>>>>> shahnawaaz
   </component>
 <<<<<<< HEAD
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+<<<<<<< HEAD
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new" />
@@ -958,10 +1214,70 @@
           <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           <folding>
             <element signature="e#34#56#0#PHP" expanded="true" />
+=======
+=======
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2e helft downloads en handige links" />
+    <MESSAGE value="downloads en handige links in nav gezet" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="74" column="94" selection-start-line="74" selection-start-column="94" selection-end-line="74" selection-end-column="94" />
+          <folding>
+            <element signature="e#3388#3412#0#Twig" expanded="true" />
+>>>>>>> shahnawaaz
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Controller/LoonstrokenController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1256,5 +1572,43 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/src/Controller/DownloadsenHandigelinksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DownloadsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/downloads/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" selection-start-line="4" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/handige_links/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/downloadsen_handigelinks/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 569cb3588e5eff024557f3488eb56cdcb391a3fc
+>>>>>>> shahnawaaz
   </component>
 </project>
