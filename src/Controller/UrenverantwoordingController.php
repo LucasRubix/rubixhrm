@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Stagiair;
 use App\Entity\Urenverantwoording;
+use App\Form\StagiairType;
 use App\Form\UrenverantwoordingType;
+use App\Repository\StagiairRepository;
 use App\Repository\UrenverantwoordingRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,10 +21,10 @@ class UrenverantwoordingController extends AbstractController
     /**
      * @Route("/", name="urenverantwoording_index", methods={"GET"})
      */
-    public function index(UrenverantwoordingRepository $urenverantwoordingRepository): Response
+    public function index(UrenverantwoordingRepository $urenverantwoordingRepository, StagiairRepository $stagiairRepository): Response
     {
         return $this->render('urenverantwoording/index.html.twig', [
-            'urenverantwoordings' => $urenverantwoordingRepository->findAll(),
+            'urenverantwoordings' => $urenverantwoordingRepository->findBy(['Stagiair_id' => $stagiairRepository->findBy(['User_id' => $this->getUser()])]),
         ]);
     }
 
@@ -85,7 +88,7 @@ class UrenverantwoordingController extends AbstractController
      */
     public function delete(Request $request, Urenverantwoording $urenverantwoording): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$urenverantwoording->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $urenverantwoording->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($urenverantwoording);
             $entityManager->flush();
@@ -93,4 +96,5 @@ class UrenverantwoordingController extends AbstractController
 
         return $this->redirectToRoute('urenverantwoording_index');
     }
+
 }
