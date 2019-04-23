@@ -53,9 +53,20 @@ class Vrijvragen
     private $reden;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $goedgekeurd;
+
+    public function __construct()
+    {
+        /* Zorgt dat in /new de huidige datum en tijd wordeb weergeven */
+
+        $this->begindatum = new \DateTime();
+        $this->einddatum = new \DateTime();
+        $this->begintijd = new \DateTime();
+        $this->eindtijd = new \DateTime();
+
+    }
 
     public function getId(): ?int
     {
@@ -146,12 +157,12 @@ class Vrijvragen
         return $this;
     }
 
-    public function getGoedgekeurd(): ?bool
+    public function getGoedgekeurd(): ?string
     {
         return $this->goedgekeurd;
     }
 
-    public function setGoedgekeurd(bool $goedgekeurd): self
+    public function setGoedgekeurd(string $goedgekeurd): self
     {
         $this->goedgekeurd = $goedgekeurd;
 

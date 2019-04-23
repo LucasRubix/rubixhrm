@@ -20,9 +20,21 @@ class TelaatController extends AbstractController
      */
     public function index(TelaatRepository $telaatRepository): Response
     {
-        return $this->render('telaat/index.html.twig', [
-            'telaats' => $telaatRepository->findAll(),
-        ]);
+        if ($this->isGranted("ROLE_SUPER_ADMIN")){
+
+            return $this->render('telaat/index.html.twig', ['telaats' => $telaatRepository->findAll()]);
+        } else {
+
+            return $this->render('telaat/index.html.twig', [
+                'telaats' => $telaatRepository->findBy(
+                    [
+                        'User_id' => $this->getUser()
+                    ]
+                ),
+            ]);
+        }
+
+
     }
 
     /**

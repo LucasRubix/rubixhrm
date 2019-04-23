@@ -12,14 +12,15 @@ class StagiairType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('urentotaal')
+            ->add('urentotaal', null, ['label' => 'Aantal uren'])
+            ->add('urenperdag')
             ->add('begindatum')
             ->add('einddatum')
             ->add('school')
             ->add('contactpersoon')
-            ->add('contactpersoon_email')
-            ->add('contactpersoon_telefoonnr')
-            ->add('User_id')
+            ->add('contactpersoon_email', null, ['label' => 'Emailadres Contactpersoon'])
+            ->add('contactpersoon_telefoonnr', null, ['label' => 'Telefoonnummer Contactpersoon'])
+            ->add('User_id', null, ['label' => 'User'])
         ;
     }
 
