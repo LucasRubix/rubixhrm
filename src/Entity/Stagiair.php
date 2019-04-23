@@ -182,4 +182,9 @@ class Stagiair
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return (string)$this->User_id;
+    }
 }

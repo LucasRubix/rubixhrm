@@ -28,14 +28,17 @@ class VrijvragenType extends AbstractType
             ->add('uren')
             ->add('begintijd')
             ->add('eindtijd')
+
             ->add('reden')
-            ->add('User_id');
+            ->add('reden')
+            ->add('User_id', null, array('label' => false, 'attr'=>array('style' => 'display:none')));
 
             if ( $this->security->isGranted( "ROLE_SUPER_ADMIN" ) ) {
                 $builder
                     ->add('goedgekeurd', ChoiceType::class, [
                     'choices' => ['In Behandeling' => 'behandeling', 'Goedgekeurd' => 'goedgekeurd', 'Afgekeurd' => 'afgekeurd'],
-                ]);
+                ])
+                    ->add('User_id');
         ;
     }
     }

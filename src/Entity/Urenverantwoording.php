@@ -48,9 +48,17 @@ class Urenverantwoording
     private $omschrijving;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $goedgekeurd;
+
+    public function __construct()
+    {
+        $this->datum = new \DateTime();
+        $this->begintijd = new \DateTime();
+        $this->eindtijd = new \DateTime();
+
+    }
 
     public function getId(): ?int
     {
@@ -129,12 +137,12 @@ class Urenverantwoording
         return $this;
     }
 
-    public function getGoedgekeurd(): ?string
+    public function getGoedgekeurd(): ?bool
     {
         return $this->goedgekeurd;
     }
 
-    public function setGoedgekeurd(?string $goedgekeurd): self
+    public function setGoedgekeurd(bool $goedgekeurd): self
     {
         $this->goedgekeurd = $goedgekeurd;
 

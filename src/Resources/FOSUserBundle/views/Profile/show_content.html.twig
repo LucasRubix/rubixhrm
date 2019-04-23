@@ -1,6 +1,61 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 <div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <div class="card">
+        <div class="card-header maincolor whitetext">
+            Profiel van {% if app.user %} {{ app.user.username }} {% else %} {{ Profiel }} {% endif %}
+        </div>
+
+        <div class="card-body">
+
+
+            <div class="row">
+                <div class="col-sm">
+
+                    <p>Gebruikersnaam</p>
+                    <p>Email: </p>
+                    <p>Tussenvoegsel: </p>
+                    <p>Achternaam: </p>
+                    <p>Geboortedatum: </p>
+                    <p>Telefoonnummer: </p>
+                    <p>Adres: </p>
+                    <p>Postcode: </p>
+                    <p>Identiteitskaartsnummer: </p>
+                    <p>IBAN: </p>
+                    <p>Facebook: </p>
+                    <p>LinkedIn: </p>
+
+                </div>
+
+                <div class="col-sm">
+
+                    <p>{{ 'profile.show.username'|trans }} </p>
+                    <p>{{ 'profile.show.email'|trans }} </p>
+                    <p>{{ user.tussenvoegsel }}</p>
+                    <p>{{ user.achternaam }}</p>
+                    <p>{{ user.geboortedatum ? user.geboortedatum|date('d-m-Y') }}</p>
+                    <p>{{ user.telefoonnr }}</p>
+                    <p>{{ user.adres }}</p>
+                    <p>{{ user.postcode }}</p>
+                    <p>{{ user.idkaartnummer }}</p>
+                    <p>{{ user.iban }}</p>
+                    <p>{{ user.facebook }}</p>
+                    <p>{{ user.linkedin }}</p>
+
+
+                </div>
+
+                <div class="col-sm">
+                    {# Dit hoort leeg te zijn #}
+                </div>
+            </div>
+
+
+            <br>
+
+            <a class="btn btn-success btn-block greenbutton" href="{{ path('fos_user_profile_edit', {'id': user.id}) }}">Profiel
+                wijzigen</a>
+
+        </div>
+    </div>
 </div>
