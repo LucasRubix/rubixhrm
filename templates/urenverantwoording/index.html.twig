@@ -1,45 +1,140 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Urenverantwoording index{% endblock %}
+{% block title %}Urenverantwoording{% endblock %}
 
 {% block body %}
-    <h1>Urenverantwoording index</h1>
+    <a href="{{ path('urenverantwoording_new') }}" class="btn btn-success greenbutton">Uren invoeren</a>
+    <div class="row">
+        <div class="col">
+            <p class="text-center">In behandeling</p>
+            <table class="table table-striped">
+                <thead class="maincolor">
+                <tr class="whitetext">
+                    {#                    <th>Id</th>#}
+                    <th>Datum</th>
+                    {#                    <th>Einddatum</th>#}
+                    <th>Uren</th>
+                    {#                    <th>Begintijd</th>#}
+                    {#                    <th>Eindtijd</th>#}
+                    <th>Omschrijving</th>
+                    {#                    <th>Goedgekeurd</th>#}
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {#                {% for vrijvragen in vrijvragens if vrijvragen.goedgekeurd == 'behandeling' %}#}
+                {% for urenverantwoording in urenverantwoordings if urenverantwoording.goedgekeurd == null %}
 
-    <table class="table table-striped">
-        <thead class="maincolor">
-            <tr class="whitetext">
-{#                <th>Id</th>#}
-                <th>Datum</th>
-                <th>Uren</th>
-                <th>Begintijd</th>
-                <th>Eindtijd</th>
-                <th>Omschrijving</th>
-                <th>Goedgekeurd</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for urenverantwoording in urenverantwoordings %}
-            <tr>
-{#                <td>{{ urenverantwoording.id }}</td>#}
-                <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
-                <td>{{ urenverantwoording.uren }}</td>
-                <td>{{ urenverantwoording.begintijd ? urenverantwoording.begintijd|date('Y-m-d') : '' }}</td>
-                <td>{{ urenverantwoording.eindtijd ? urenverantwoording.eindtijd|date('Y-m-d') : '' }}</td>
-                <td>{{ urenverantwoording.omschrijving }}</td>
-                <td>{{ urenverantwoording.goedgekeurd ? 'Yes' : 'No' }}</td>
-                <td>
-                    <a class="btn btn-success greenbutton" href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-warning" href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}"><i class="fas fa-edit"></i></a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                    <tr>
+                        {#                            <td>{{ vrijvragen.id }}</td>#}
+                        <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
+                        {#                            <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>#}
+                        <td>{{ urenverantwoording.uren }}</td>
+                        {#                            <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>#}
+                        {#                            <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>#}
+                        <td>{{ urenverantwoording.omschrijving }}</td>
+                        {#                            <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>#}
+                        <td>
+                            <a class="btn btn-success greenbutton mb-3" href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-warning" href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}"><i class="fas fa-edit"></i></a>
 
-    <a href="{{ path('urenverantwoording_new') }}" class="btn btn-success greenbutton">Create new</a>
+                        </td>
+                    </tr>
+
+                {% else %}
+                    <tr>
+                        <td colspan="9">no records found</td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <p class="text-center">Goedgekeurd</p>
+            <table class="table table-striped">
+                <thead class="maincolor">
+                <tr class="whitetext">
+                    {#                    <th>Id</th>#}
+                    <th>Datum</th>
+                    {#                    <th>Einddatum</th>#}
+                    <th>Uren</th>
+                    {#                    <th>Begintijd</th>#}
+                    {#                    <th>Eindtijd</th>#}
+                    <th>Omschrijving</th>
+                    {#                    <th>Goedgekeurd</th>#}
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for urenverantwoording in urenverantwoordings if urenverantwoording.goedgekeurd == 'goedgekeurd' %}
+
+                    <tr>
+                        {#                            <td>{{ vrijvragen.id }}</td>#}
+                        <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
+                        {#                            <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>#}
+                        <td>{{ urenverantwoording.uren }}</td>
+                        {#                            <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>#}
+                        {#                            <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>#}
+                        <td>{{ urenverantwoording.omschrijving }}</td>
+                        {#                            <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>#}
+                        <td>
+                            <a class="btn btn-success greenbutton mb-3" href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-warning" href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}"><i class="fas fa-edit"></i></a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="9">no records found</td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <p class="text-center">Afgekeurd</p>
+            <table class="table table-striped">
+                <thead class="maincolor">
+                <tr class="whitetext">
+                    {#                    <th>Id</th>#}
+                    <th>Datum</th>
+                    {#                    <th>Einddatum</th>#}
+                    <th>Uren</th>
+                    {#                    <th>Begintijd</th>#}
+                    {#                    <th>Eindtijd</th>#}
+                    <th>Omschrijving</th>
+                    {#                    <th>Goedgekeurd</th>#}
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for urenverantwoording in urenverantwoordings if urenverantwoording.goedgekeurd == 'afgekeurd' %}
+                    <tr>
+                        {#                            <td>{{ vrijvragen.id }}</td>#}
+                        <td>{{ urenverantwoording.datum ? urenverantwoording.datum|date('Y-m-d') : '' }}</td>
+                        {#                            <td>{{ vrijvragen.einddatum ? vrijvragen.einddatum|date('Y-m-d') : '' }}</td>#}
+                        <td>{{ urenverantwoording.uren }}</td>
+                        {#                            <td>{{ vrijvragen.begintijd ? vrijvragen.begintijd|date('H:i:s') : '' }}</td>#}
+                        {#                            <td>{{ vrijvragen.eindtijd ? vrijvragen.eindtijd|date('H:i:s') : '' }}</td>#}
+                        <td>{{ urenverantwoording.omschrijving }}</td>
+                        {#                            <td>{{ vrijvragen.goedgekeurd ? 'Yes' : 'No' }}</td>#}
+                        <td>
+                            <a class="btn btn-success greenbutton" href="{{ path('urenverantwoording_show', {'id': urenverantwoording.id}) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-warning" href="{{ path('urenverantwoording_edit', {'id': urenverantwoording.id}) }}"><i class="fas fa-edit"></i></a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="9">no records found</td>
+                    </tr>
+                {% endfor %}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {#    <a href="{{ path('vrijvragen_new') }}" class="btn btn-success greenbutton">Create new</a>#}
 {% endblock %}

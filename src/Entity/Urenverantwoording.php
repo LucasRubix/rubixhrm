@@ -48,7 +48,7 @@ class Urenverantwoording
     private $omschrijving;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $goedgekeurd;
 
@@ -129,12 +129,12 @@ class Urenverantwoording
         return $this;
     }
 
-    public function getGoedgekeurd(): ?bool
+    public function getGoedgekeurd(): ?string
     {
         return $this->goedgekeurd;
     }
 
-    public function setGoedgekeurd(bool $goedgekeurd): self
+    public function setGoedgekeurd(?string $goedgekeurd): self
     {
         $this->goedgekeurd = $goedgekeurd;
 
