@@ -145,6 +145,7 @@
                     {#                <th>Id</th>#}
                     <th>Datum</th>
                     <th>Datumbeter</th>
+                    <th>Naam</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -154,6 +155,7 @@
                         {#                <td>{{ ziek.id }}</td>#}
                         <td>{{ ziek.datum ? ziek.datum|date('Y-m-d') : '' }}</td>
                         <td>{{ ziek.datumbeter ? ziek.datumbeter|date('Y-m-d') : '' }}</td>
+                        <td>{{ ziek.userId }}</td>
                         <td>
                             <a href="{{ path('ziek_show', {'id': ziek.id}) }}"><i class="fas fa-eye"></i></a>
                             <a href="{{ path('ziek_edit', {'id': ziek.id}) }}"><i class="fas fa-edit"></i></a>

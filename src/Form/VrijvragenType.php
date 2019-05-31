@@ -23,8 +23,8 @@ class VrijvragenType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('begindatum')
-            ->add('einddatum')
+            ->add('begindatum', null, array('label' => 'Begindatum', 'years' => range(date('Y'), date('Y') + 0),))
+            ->add('einddatum', null, array('label' => 'Einddatum', 'years' => range(date('Y'), date('Y') + 2),))
             ->add('uren')
             ->add('begintijd')
             ->add('eindtijd')
